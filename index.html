@@ -41,24 +41,29 @@
 									ID
         						</td>
 								<td>
-									First Name
+									<button ng-click="sortBy('firstname')">First Name</button>
+        							<span class="sortorder" ng-show="propertyName === 'firstname'" ng-class="{reverse: reverse}"></span>
 								</td>
 								<td>
-									Surname
+									<button ng-click="sortBy('surname')">Surname</button>
+        							<span class="sortorder" ng-show="propertyName === 'surname'" ng-class="{reverse: reverse}"></span>
 								</td>
 								<td>
-									Sex
+									<button ng-click="sortBy('sex')">Sex</button>
+        							<span class="sortorder" ng-show="propertyName === 'sex'" ng-class="{reverse: reverse}"></span>
 								</td>
 								<td>
-									Teir
+									<button ng-click="sortBy('teir')">Teir</button>
+        							<span class="sortorder" ng-show="propertyName === 'teir'" ng-class="{reverse: reverse}"></span>
 								</td>
 								<td>
-									Email
+									<button ng-click="sortBy('email')">Email</button>
+        							<span class="sortorder" ng-show="propertyName === 'email'" ng-class="{reverse: reverse}"></span>
 								</td>
 							</tr>
 						</thead>
 						<tbody >
-							<tr ng-repeat="detail in players.player">
+							<tr ng-repeat="detail in players.player | orderBy:propertyName:reverse">
 								<td>{{players.player.indexOf(detail)}}</td>
 								<td>{{detail.firstname}}</td>
 								<td>{{detail.surname}}</td>

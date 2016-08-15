@@ -10,5 +10,10 @@
 			players.player = data;
 		});
 
+		$scope.sortBy = function(propertyName) {
+			$scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
+			$scope.propertyName = propertyName;
+		};
+
 	} ]);
 })();
