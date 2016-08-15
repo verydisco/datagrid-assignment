@@ -21,3 +21,22 @@ html, body{
 .content{
 	width: calc(100% - 160px);
 }
+.ng-invalid.ng-dirty{
+	border-color: #FA787E;
+}
+
+.ng-valid.ng-dirty{
+	border-color: #78FA89;
+}
+
+.ng-submitted{
+	input[type="text"], input[type="email"], select{
+		&.ng-empty,.ng-invalid,.ng-invalid-required{
+			border-color: #FA787E;	
+		}
+	}
+}
+
+.sex{
+
+}

@@ -3,98 +3,98 @@
 		"firstname": "Fred",
 		"surname": "Redwood",
 		"sex": "male",
-		"teir": "gold",
+		"tier": "gold",
 		"email": "fred@gmail.com"
 	},
 	{
 		"firstname": "Trevor",
 		"surname": "Banforth",
 		"sex": "male",
-		"teir": "gold",
+		"tier": "gold",
 		"email": "trevor@gmail.com"
 	},
 	{
 		"firstname": "James",
 		"surname": "Jameson",
 		"sex": "male",
-		"teir": "gold",
+		"tier": "gold",
 		"email": "james@gmail.com"
 	},
 	{
 		"firstname": "Raymond",
 		"surname": "Smith",
 		"sex": "male",
-		"teir": "silver",
+		"tier": "silver",
 		"email": "raymond@gmail.com"
 	},
 	{
 		"firstname": "Sam",
 		"surname": "Denvor",
 		"sex": "male",
-		"teir": "gold",
+		"tier": "gold",
 		"email": "sam@gmail.com"
 	},
 	{
 		"firstname": "Bart",
 		"surname": "Smith",
 		"sex": "male",
-		"teir": "gold",
+		"tier": "gold",
 		"email": "bart@gmail.com"
 	},
 	{
 		"firstname": "Jan",
 		"surname": "Tomsom",
 		"sex": "female",
-		"teir": "gold",
+		"tier": "gold",
 		"email": "jan@gmail.com"
 	},
 	{
 		"firstname": "Mike",
 		"surname": "Treks",
 		"sex": "male",
-		"teir": "gold",
+		"tier": "gold",
 		"email": "mike@gmail.com"
 	},
 	{
 		"firstname": "David",
 		"surname": "Hughes",
 		"sex": "male",
-		"teir": "gold",
+		"tier": "gold",
 		"email": "david@gmail.com"
 	},
 	{
 		"firstname": "Jimmy",
 		"surname": "Barns",
 		"sex": "male",
-		"teir": "bronze",
+		"tier": "bronze",
 		"email": "jimmy@gmail.com"
 	},
 	{
 		"firstname": "Danny",
 		"surname": "Carter",
 		"sex": "female",
-		"teir": "gold",
+		"tier": "gold",
 		"email": "danny@gmail.com"
 	},
 	{
 		"firstname": "Rob",
 		"surname": "Roy",
 		"sex": "male",
-		"teir": "gold",
+		"tier": "gold",
 		"email": "rob@gmail.com"
 	},
 	{
 		"firstname": "Homer",
 		"surname": "Walker",
 		"sex": "male",
-		"teir": "bronze",
+		"tier": "bronze",
 		"email": "homer@gmail.com"
 	},
 	{
 		"firstname": "Steve",
 		"surname": "Wonder",
 		"sex": "male",
-		"teir": "silver",
+		"tier": "silver",
 		"email": "steve@gmail.com"
 	}
 ]

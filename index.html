@@ -56,8 +56,8 @@
         							<span class="sortorder" ng-show="propertyName === 'sex'" ng-class="{reverse: reverse}"></span>
 								</td>
 								<td>
-									<button ng-click="sortBy('teir')">Teir</button>
-        							<span class="sortorder" ng-show="propertyName === 'teir'" ng-class="{reverse: reverse}"></span>
+									<button ng-click="sortBy('tier')">Teir</button>
+        							<span class="sortorder" ng-show="propertyName === 'tier'" ng-class="{reverse: reverse}"></span>
 								</td>
 								<td>
 									<button ng-click="sortBy('email')">Email</button>
@@ -70,8 +70,8 @@
 								<td>{{players.player.indexOf(detail)}}</td>
 								<td>{{detail.firstname}}</td>
 								<td>{{detail.surname}}</td>
-								<td>{{detail.sex}}</td>
-								<td>{{detail.teir}}</td>
+								<td class"sex"><img src="../images/icon-{{detail.sex}}.png" /></td>
+								<td class"tier"><img src="../images/tier_{{detail.tier}}.png" /></td>
 								<td>{{detail.email}}</td>
 							</tr>
 						</tbody>

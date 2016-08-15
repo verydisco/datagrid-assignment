@@ -15,6 +15,14 @@
 			$scope.propertyName = propertyName;
 		};
 
+		this.newplayer = {};
+
+		this.addNewPlayer = function(player){
+			$scope.players.player.push(this.newplayer);
+			this.newplayer = {};	
+			$scope.modalInstance.close();	
+		};
+		
 		$scope.showAddForm = function () {
             $scope.modalInstance = $modal.open({
                 templateUrl: '/modal-form.html',
@@ -48,5 +56,5 @@
 	        $modalInstance.dismiss('cancel');
 	    };
 	};
-	
+
 })();
