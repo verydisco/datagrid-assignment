@@ -1,1 +1,1 @@
-html,body{background:#f2f2f2}
+html,body{background:#f2f2f2;margin:0 auto;padding:0}.sidebar,.content{display:inline-block;vertical-align:top;margin:0;padding:0;-moz-box-sizing:border-box;box-sizing:border-box}.sidebar{width:160px}.content{width:calc(100% - 160px)}
