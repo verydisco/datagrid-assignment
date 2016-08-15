@@ -2,6 +2,8 @@
 <html ng-app="players">
 	<head>
 		<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+		<link  rel="stylesheet" type="text/css" href="/css/bootstrap-toggle.min.css" rel="stylesheet">
+
 		<link rel="stylesheet" type="text/css" href="/css/style.css" />
 		
 
@@ -9,6 +11,7 @@
 		<script type="text/javascript" src="/js/angular.min.js"></script>
 		<script type="text/javascript" src="/js/ui-bootstrap-tpls-0.9.0.js"></script>
 		<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/js/bootstrap-toggle.min.js"></script>
 		<script type="text/javascript" src="/js/app.js"></script>
 	</head>
 
@@ -28,7 +31,7 @@
 			<div class="sidebar">
 				<div >
 	                <div class="page-body">
-	                    <button class="btn btn-primary">Create Account</button>
+	                    <button class="btn btn-primary" ng-click="showAddForm()">Create Account</button>
 	                </div>
 	            </div>
 			</div><!--
@@ -63,7 +66,7 @@
 							</tr>
 						</thead>
 						<tbody >
-							<tr ng-repeat="detail in players.player | orderBy:propertyName:reverse">
+							<tr ng-repeat="detail in players.player | orderBy:propertyName:reverse" ng-click="showEditForm(detail)">
 								<td>{{players.player.indexOf(detail)}}</td>
 								<td>{{detail.firstname}}</td>
 								<td>{{detail.surname}}</td>
