@@ -1,26 +1,75 @@
 $brand-color-primary: #f2f2f2; //background grey
+$brand-color-secondary: #bdccd4; //font light grey
+$brand-color-tertiary: #353b45; //body blue
+$brand-color-white: #ffffff; //white
 
 html, body{
-	background: $brand-color-primary;
+	background: $brand-color-tertiary;
 	margin: 0 auto;
 	padding: 0;
+
+}
+#master{
+	max-width: 1160px;
+	margin: 60px auto;
+	background: $brand-color-primary;
+	border-radius: 60px;
+
+}
+.wrapper{
+	padding: 0 30px;
+	position: relative;
+}
+header{
+	position: relative;
+	background: $brand-color-white;
+	border-radius: 40px 40px 0 0;
+	.logo{
+		width: 250px;
+		height: 43px;
+		background: url(../images/Viz-logo.svg) no-repeat;
+		display: inline-block;
+		margin: 15px 0 10px 0;
+	}
+	h1{
+		position: absolute;
+		right: 30px;
+		top: 5px;
+		color: $brand-color-secondary;
+		font-size: 22px;
+		line-height: 22px;
+		margin-bottom: 10px;
+	}
 }
 
-.sidebar, .content{
-	display: inline-block;
-	vertical-align: top;
-	margin: 0;
-	padding: 0;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-.sidebar{
-	width: 160px;
+footer{
+	position: relative;
+	background: $brand-color-white;
+	height: 60px;
+	border-radius: 0 0 40px 40px;
 }
 
-.content{
-	width: calc(100% - 160px);
+
+#main{
+	padding: 30px 0;
+	.sidebar, .content{
+		display: inline-block;
+		vertical-align: top;
+		margin: 0;
+		padding: 0;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	.sidebar{
+		width: 160px;
+	}
+
+	.content{
+		width: calc(100% - 160px);
+	}
 }
+
+
 .ng-invalid.ng-dirty{
 	border-color: #FA787E;
 }
@@ -37,6 +86,17 @@ html, body{
 	}
 }
 
-.sex{
-
+#table-wrapper{
+	width: 100%;
+	max-height: 400px;
+	overflow-y: scroll;
+	&::-webkit-scrollbar {
+	    -webkit-appearance: none;
+	    width: 7px;
+	}
+	&::-webkit-scrollbar-thumb {
+	    border-radius: 4px;
+	    background-color: rgba(0,0,0,.5);
+	    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+	}
 }

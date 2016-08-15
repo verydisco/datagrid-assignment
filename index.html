@@ -16,72 +16,71 @@
 	</head>
 
 	<body ng-controller="PlayersController as players">
-		<header>
-			<h1>This is the header</h1>
-		</header>
+		<div id="master">
+			<header>
+				<div class="wrapper">
+					<a href="/" alt="VizExplore Logo" class="logo"></a>
+					<h1>DataSheet Assignment</h1>
+				</div>
+			</header>
 
-
-
-		
-	
-
-
-
-		<div class="wrapper">
-			<div class="sidebar">
-				<div >
-	                <div class="page-body">
-	                    <button class="btn btn-primary" ng-click="showAddForm()">Create Account</button>
-	                </div>
-	            </div>
-			</div><!--
-			--><div class="content">
-				<section>
-					<table class="table table-bordered">
-						<thead>
-							<tr>
-								<td>
-									<button ng-click="propertyName = null; reverse = false">ID</button>
-        						</td>
-								<td>
-									<button ng-click="sortBy('firstname')">First Name</button>
-        							<span class="sortorder" ng-show="propertyName === 'firstname'" ng-class="{reverse: reverse}"></span>
-								</td>
-								<td>
-									<button ng-click="sortBy('surname')">Surname</button>
-        							<span class="sortorder" ng-show="propertyName === 'surname'" ng-class="{reverse: reverse}"></span>
-								</td>
-								<td>
-									<button ng-click="sortBy('sex')">Sex</button>
-        							<span class="sortorder" ng-show="propertyName === 'sex'" ng-class="{reverse: reverse}"></span>
-								</td>
-								<td>
-									<button ng-click="sortBy('tier')">Teir</button>
-        							<span class="sortorder" ng-show="propertyName === 'tier'" ng-class="{reverse: reverse}"></span>
-								</td>
-								<td>
-									<button ng-click="sortBy('email')">Email</button>
-        							<span class="sortorder" ng-show="propertyName === 'email'" ng-class="{reverse: reverse}"></span>
-								</td>
-							</tr>
-						</thead>
-						<tbody >
-							<tr ng-repeat="detail in players.player | orderBy:propertyName:reverse" ng-click="showEditForm(detail)">
-								<td>{{players.player.indexOf(detail)}}</td>
-								<td>{{detail.firstname}}</td>
-								<td>{{detail.surname}}</td>
-								<td class"sex"><img src="../images/icon-{{detail.sex}}.png" /></td>
-								<td class"tier"><img src="../images/tier_{{detail.tier}}.png" /></td>
-								<td><a href="mailto:{{detail.email}}" title="Email {{detail.firstname}} {{detail.surname}}">{{detail.email}}</a></td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
-			
-
-
+			<div id="main">
+				<div class="wrapper">
+					<div class="sidebar">
+						<div >
+			                <div class="page-body">
+			                    <button class="btn btn-primary" ng-click="showAddForm()">Create Account</button>
+			                </div>
+			            </div>
+					</div><!--
+					--><div class="content">
+						<section id="table-wrapper">
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<td>
+											<button ng-click="propertyName = null; reverse = false">ID</button>
+		        						</td>
+										<td>
+											<button ng-click="sortBy('firstname')">First Name</button>
+		        							<span class="sortorder" ng-show="propertyName === 'firstname'" ng-class="{reverse: reverse}"></span>
+										</td>
+										<td>
+											<button ng-click="sortBy('surname')">Surname</button>
+		        							<span class="sortorder" ng-show="propertyName === 'surname'" ng-class="{reverse: reverse}"></span>
+										</td>
+										<td>
+											<button ng-click="sortBy('sex')">Sex</button>
+		        							<span class="sortorder" ng-show="propertyName === 'sex'" ng-class="{reverse: reverse}"></span>
+										</td>
+										<td>
+											<button ng-click="sortBy('tier')">Teir</button>
+		        							<span class="sortorder" ng-show="propertyName === 'tier'" ng-class="{reverse: reverse}"></span>
+										</td>
+										<td>
+											<button ng-click="sortBy('email')">Email</button>
+		        							<span class="sortorder" ng-show="propertyName === 'email'" ng-class="{reverse: reverse}"></span>
+										</td>
+									</tr>
+								</thead>
+								<tbody >
+									<tr ng-repeat="detail in players.player | orderBy:propertyName:reverse" ng-click="showEditForm(detail)">
+										<td>{{players.player.indexOf(detail)}}</td>
+										<td>{{detail.firstname}}</td>
+										<td>{{detail.surname}}</td>
+										<td class"sex"><img src="../images/icon-{{detail.sex}}.png" /></td>
+										<td class"tier"><img src="../images/tier_{{detail.tier}}.png" /></td>
+										<td><a href="mailto:{{detail.email}}" title="Email {{detail.firstname}} {{detail.surname}}">{{detail.email}}</a></td>
+									</tr>
+								</tbody>
+							</table>
+						</section>
+					</div>
+				</div>
 			</div>
+
+			<footer>
+			</footer>
 		</div>
-		
 	</body>
 </html>
