@@ -4,6 +4,7 @@
 
 <form name="userForm" ng-controller="PlayersController as reviewCtrl"   ng-submit="userForm.$valid  && reviewCtrl.updatePlayer()" novalidate>
 	<div class="modal-fieldsets">
+		
 		<div class="modal-fieldset__full">
 			<label for="firstname">First Name</label><!--
 			--><input ng-model="selectedPlayer.firstname" type="text" name="firstname" required />
@@ -31,6 +32,7 @@
 			<label for="email">Email</label><!--
 			--><input ng-model="selectedPlayer.email" type="email" name="email" required />
 		</div>
+		
 	</div>
 
 	<div class="modal-btns">
