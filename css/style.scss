@@ -1,6 +1,8 @@
 $brand-color-primary: #f2f2f2; //background grey
 $brand-color-secondary: #bdccd4; //font light grey
 $brand-color-tertiary: #353b45; //body blue
+$brand-color-quaternary: #eaebec; //thead background grey
+$brand-color-quinary: #414042; //thead color grey
 $brand-color-white: #ffffff; //white
 
 html, body{
@@ -70,6 +72,86 @@ footer{
 }
 
 
+#table-wrapper{
+	width: 100%;
+	height: 590px;
+	display: block;
+	thead, tbody, tr{
+		padding: 0;
+		margin: 0;
+		display: block;
+	}
+
+	td{
+		display: inline-block;
+		padding: 0;
+		margin: 0;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		&.default-col{
+			width: calc(33% - 36px);
+		}
+		
+		&.id-col{
+			width: 34px;
+			text-align: center;
+		}
+		&.sex-col, &.teir-col{
+			width: 40px;
+			text-align: center;
+		}
+		img{
+			display: block;
+		}
+	}
+	thead{
+		width: calc(100% - 7px);
+		background: $brand-color-quaternary;
+		color: $brand-color-quinary;
+		td{
+			height: 20px;
+			button{
+				padding: 0;
+				margin: 0;
+				background: transparent;
+				border: 0;
+				line-height: 10px;
+				margin-left: 15px;
+			}
+			&.sex-col, &.teir-col{
+				button{
+					margin-left: 0;
+				}
+			}
+		}
+	}
+	tbody{
+		width: 100%;
+		height: 570px;
+		overflow-y: auto;   
+    	overflow-x: hidden;
+		&::-webkit-scrollbar {
+		    -webkit-appearance: none;
+		    width: 7px;
+		}
+		&::-webkit-scrollbar-thumb {
+		    border-radius: 4px;
+		    background-color: rgba(0,0,0,.5);
+		    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+		}
+		td{
+			height: 42px;
+			line-height: 40px;
+			span{
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+				padding-left: 15px;
+			}
+		}
+	}
+	
+}
+
 .ng-invalid.ng-dirty{
 	border-color: #FA787E;
 }
@@ -86,17 +168,3 @@ footer{
 	}
 }
 
-#table-wrapper{
-	width: 100%;
-	max-height: 400px;
-	overflow-y: scroll;
-	&::-webkit-scrollbar {
-	    -webkit-appearance: none;
-	    width: 7px;
-	}
-	&::-webkit-scrollbar-thumb {
-	    border-radius: 4px;
-	    background-color: rgba(0,0,0,.5);
-	    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
-	}
-}

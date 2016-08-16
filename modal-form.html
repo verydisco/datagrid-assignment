@@ -1,5 +1,5 @@
 <div class="modal-header">
-    <h3>Create A New Account!</h3>
+    <h3>Edit Account!</h3>
 </div>
 
 <form name="userForm" ng-controller="PlayersController as reviewCtrl"   ng-submit="userForm.$valid  && reviewCtrl.addNewPlayer(players)" novalidate>
@@ -13,9 +13,9 @@
 		<option value="" selected disabled>Select Gender</option>
 	</select>
 
-	<label for="teir">Tier</label>
-	<select ng-options="teir for teir in ['bronze', 'silver', 'gold']" ng-model="reviewCtrl.newplayer.tier" name="tier" required>
-		<option value="" selected disabled>Select Tier</option>
+	<label for="tier">Tier</label>
+	<select ng-options="tier for tier in ['bronze', 'silver', 'gold']" ng-model="reviewCtrl.newplayer.tier" name="tier" required>
+		<option value="" selected disabled>Select Teir</option>
 	</select>
 
 	<label for="email">Email</label>

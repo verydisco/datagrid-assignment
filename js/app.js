@@ -22,7 +22,17 @@
 			this.newplayer = {};	
 			$scope.modalInstance.close();	
 		};
-		
+
+		this.updatePlayer = function(){
+			var index =  $scope.players.player.map(function(d) { return d['$$hashKey']; }).indexOf($scope.selectedPlayerKey);
+			$scope.players.player[index] = $scope.selectedPlayer;
+			
+			$scope.modalInstance.close();	
+
+		};
+
+
+
 		$scope.showAddForm = function () {
             $scope.modalInstance = $modal.open({
                 templateUrl: '/modal-form.html',
@@ -37,8 +47,10 @@
         };
 
         $scope.showEditForm = function (detail) {
-        	console.log(detail);
+            $scope.selectedPlayer = angular.copy(detail);
+            $scope.selectedPlayerKey = detail['$$hashKey'];
             $scope.modalInstance = $modal.open({
+                
                 templateUrl: '/modal-editform.html',
                 controller: ModalInstanceCtrl,
                 scope: $scope,
@@ -49,6 +61,8 @@
                 }
             });
         };
+
+        
 	} ]);
 
 	var ModalInstanceCtrl = function ($scope, $modalInstance) {

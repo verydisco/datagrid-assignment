@@ -2,24 +2,24 @@
     <h3>Edit Account!</h3>
 </div>
 
-<form name="userForm" ng-controller="PlayersController as reviewCtrl"   ng-submit="userForm.$valid  && reviewCtrl.addNewPlayer(players)" novalidate>
+<form name="userForm" ng-controller="PlayersController as reviewCtrl"   ng-submit="userForm.$valid  && reviewCtrl.updatePlayer()" novalidate>
 	<label for="firstname">First Name</label>
-	<input ng-model="reviewCtrl.newplayer.firstname" type="text" name="firstname" required />
+	<input ng-model="selectedPlayer.firstname" type="text" name="firstname" required />
 	<label for="surname">Surname</label>
-	<input ng-model="reviewCtrl.newplayer.surname" type="text" name="surname" required />
+	<input ng-model="selectedPlayer.surname" type="text" name="surname"  required />
 	
 	<label for="sex">Gender</label>
-	<select ng-options="sex for sex in ['male', 'female']" ng-model="reviewCtrl.newplayer.sex" name="sex" required>
+	<select ng-options="sex for sex in ['male', 'female']" ng-model="selectedPlayer.sex" name="sex" required>
 		<option value="" selected disabled>Select Gender</option>
 	</select>
 
-	<label for="teir">Tier</label>
-	<select ng-options="teir for tier in ['bronze', 'silver', 'gold']" ng-model="reviewCtrl.newplayer.tier" name="tier" required>
+	<label for="tier">Tier</label>
+	<select ng-options="tier for tier in ['bronze', 'silver', 'gold']" ng-model="selectedPlayer.tier" name="tier" required>
 		<option value="" selected disabled>Select Tier</option>
 	</select>
 
 	<label for="email">Email</label>
-	<input ng-model="reviewCtrl.newplayer.email" type="email" name="email" required />
+	<input ng-model="selectedPlayer.email" type="email" name="email" required />
 
 
 	<button type="submit" class="btn btn-primary" ng-disabled="form.userForm.$invalid">OK</button>
