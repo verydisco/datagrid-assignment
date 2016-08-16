@@ -9,7 +9,9 @@ $brand-color-octonary: #343a44; //modal header background
 $brand-color-nonary: #29abe2; //modal header color
 $brand-color-denary: #e6e6e6; //modal form body
 $brand-color-eleven: #f7f7f7; //modal form btns
-
+$brand-color-duodenary: #cccccc; //modal form inputs
+$brand-color-twelve: #f1f1f1; //btn background
+$brand-color-thirteen: #6f6f6f; //btn color
 $brand-color-white: #ffffff; //white
 
 html, body{
@@ -212,7 +214,8 @@ footer{
 			-moz-box-sizing: border-box;
 			box-sizing: border-box;
 			padding: 5px 10px;
-
+			border-radius: 5px;
+			border: 1px solid $brand-color-duodenary;
 		}
 	}
 	&-fieldset__half{
@@ -241,6 +244,13 @@ footer{
 		text-align: right;
 		background: $brand-color-eleven;
 	}
+}
+
+.btn-grey{
+	background: $brand-color-twelve;
+	color: $brand-color-thirteen;
+	font-weight: bold;
+	border: 1px solid $brand-color-duodenary;
 }
 
 
