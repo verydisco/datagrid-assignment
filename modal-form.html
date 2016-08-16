@@ -1,27 +1,40 @@
 <div class="modal-header">
-    <h3>Edit Account!</h3>
+    <h3>Add Player</h3>
 </div>
 
 <form name="userForm" ng-controller="PlayersController as reviewCtrl"   ng-submit="userForm.$valid  && reviewCtrl.addNewPlayer(players)" novalidate>
-	<label for="firstname">First Name</label>
-	<input ng-model="reviewCtrl.newplayer.firstname" type="text" name="firstname" required />
-	<label for="surname">Surname</label>
-	<input ng-model="reviewCtrl.newplayer.surname" type="text" name="surname" required />
-	
-	<label for="sex">Gender</label>
-	<select ng-options="sex for sex in ['male', 'female']" ng-model="reviewCtrl.newplayer.sex" name="sex" required>
-		<option value="" selected disabled>Select Gender</option>
-	</select>
+	<div class="modal-fieldsets">
+		<div class="modal-fieldset__full">
+			<label for="firstname">First Name</label><!--
+			--><input ng-model="reviewCtrl.newplayer.firstname" type="text" name="firstname" required />
+		</div>
 
-	<label for="tier">Tier</label>
-	<select ng-options="tier for tier in ['bronze', 'silver', 'gold']" ng-model="reviewCtrl.newplayer.tier" name="tier" required>
-		<option value="" selected disabled>Select Teir</option>
-	</select>
+		<div class="modal-fieldset__full">
+			<label for="surname">Surname</label><!--
+			--><input ng-model="reviewCtrl.newplayer.surname" type="text" name="surname" required />
+		</div>
 
-	<label for="email">Email</label>
-	<input ng-model="reviewCtrl.newplayer.email" type="email" name="email" required />
+		<div class="modal-fieldset__half">
+			<label for="sex">Gender</label><!--
+			--><select ng-options="sex for sex in ['male', 'female']" ng-model="reviewCtrl.newplayer.sex" name="sex" required>
+				<option value="" selected disabled>Select Gender</option>
+			</select>
+		</div><!--
+		--><div class="modal-fieldset__half">
+			<label for="tier">Tier</label><!--
+			--><select ng-options="tier for tier in ['bronze', 'silver', 'gold']" ng-model="reviewCtrl.newplayer.tier" name="tier" required>
+				<option value="" selected disabled>Select Teir</option>
+			</select>
+		</div>
 
+		<div class="modal-fieldset__full">
+			<label for="email">Email</label><!--
+			--><input ng-model="reviewCtrl.newplayer.email" type="email" name="email" required />
+		</div>
+	</div>
 
-	<button type="submit" class="btn btn-primary" ng-disabled="form.userForm.$invalid">OK</button>
-	<button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+	<div class="modal-btns">
+		<button type="submit" class="btn btn-primary" ng-disabled="form.userForm.$invalid">OK</button>
+		<button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+	</div>
 </form>

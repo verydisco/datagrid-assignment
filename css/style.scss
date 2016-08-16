@@ -3,6 +3,13 @@ $brand-color-secondary: #bdccd4; //font light grey
 $brand-color-tertiary: #353b45; //body blue
 $brand-color-quaternary: #eaebec; //thead background grey
 $brand-color-quinary: #414042; //thead color grey
+$brand-color-senary: #f8f8f8; //row alt color
+$brand-color-septenary: #0775cc; //row highlight
+$brand-color-octonary: #343a44; //modal header background
+$brand-color-nonary: #29abe2; //modal header color
+$brand-color-denary: #e6e6e6; //modal form body
+$brand-color-eleven: #f7f7f7; //modal form btns
+
 $brand-color-white: #ffffff; //white
 
 html, body{
@@ -118,7 +125,7 @@ footer{
 				line-height: 10px;
 				margin-left: 15px;
 			}
-			&.sex-col, &.teir-col{
+			&.id-col, &.sex-col, &.teir-col{
 				button{
 					margin-left: 0;
 				}
@@ -130,6 +137,21 @@ footer{
 		height: 570px;
 		overflow-y: auto;   
     	overflow-x: hidden;
+    	tr{
+    		background: $brand-color-white;
+    		cursor: pointer;
+    		&:nth-child(odd){
+    			background: $brand-color-senary;
+    		}
+    		&.selected{
+				background: $brand-color-septenary;
+				color: $brand-color-white;
+				a{
+					color: $brand-color-white;	
+				}
+			}
+    	}
+    	
 		&::-webkit-scrollbar {
 		    -webkit-appearance: none;
 		    width: 7px;
@@ -148,9 +170,79 @@ footer{
 				padding-left: 15px;
 			}
 		}
+
 	}
 	
 }
+
+
+.modal{
+	&-header{
+		background: $brand-color-octonary;
+		padding: 10px;
+		margin: 0;
+		h3{
+			padding: 0;
+			margin: 0;
+			color: $brand-color-nonary;
+			font-size: 16px;
+		}
+	}
+	&-fieldsets{
+		padding: 20px 10px;
+		background: $brand-color-denary;
+
+	}
+	&-fieldset__full{
+		width: 100%;
+		margin-bottom: 10px;
+		label{
+			display: inline-block;
+			width: 90px;
+			padding-right: 10px;
+			text-align: right;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			font-weight: normal;
+		}
+
+		input[type="text"], input[type="email"]{
+			display: inline-block;
+			width: calc(100% - 90px);
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			padding: 5px 10px;
+
+		}
+	}
+	&-fieldset__half{
+		width: 50%;
+		display: inline-block;
+		margin-bottom: 10px;
+		label{
+			display: inline-block;
+			width: 90px;
+			padding-right: 10px;
+			text-align: right;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			font-weight: normal;
+		}
+		select{
+			display: inline-block;
+			width: calc(100% - 90px);
+			option{
+			}
+		}
+	}
+	&-btns{
+		width: 100%;
+		padding: 10px 10px;
+		text-align: right;
+		background: $brand-color-eleven;
+	}
+}
+
 
 .ng-invalid.ng-dirty{
 	border-color: #FA787E;
